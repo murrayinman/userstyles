@@ -1,0 +1,226 @@
+/* ==UserStyle==
+@name         Lang Attribute Indicator
+@namespace    reiche.us
+@author       Jason Reiche
+@version      20210308.0.2
+@description  Add indicator to any element on CourseArc that has a lang attribute
+@supportURL   https://github.com/jasonreiche/userstyles/issues
+
+==/UserStyle== */
+  /* Show lang attribute indicator- 
+     Language Codes: https://www.w3schools.com/tags/ref_language_codes.asp
+      */
+  body *[lang] {
+      position: relative;
+      background-color: khaki;
+  }
+  body *[lang]:before { 
+    position: absolute;
+      top: -30px;
+      left: 0;
+      font-size: 12px;
+      font-family: arial;
+      font-style: normal;
+      font-weight: 300;
+      background-color: purple;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      padding: 5px;
+      content: " [" attr(hreflang) "]"; /* Fallback to showing hreflang as content if match isn't found below */
+      vertical-align: bottom;
+
+  }
+  body *[lang^= 'ab']:before { content: 'Abkhazian'; }
+  body *[lang^= 'aa']:before { content: 'Afar'; }
+  body *[lang^= 'af']:before { content: 'Afrikaans'; }
+  body *[lang^= 'ak']:before { content: 'Akan'; }
+  body *[lang^= 'sq']:before { content: 'Albanian'; }
+  body *[lang^= 'am']:before { content: 'Amharic'; }
+  body *[lang^= 'ar']:before { content: 'Arabic'; }
+  body *[lang^= 'an']:before { content: 'Aragonese'; }
+  body *[lang^= 'hy']:before { content: 'Armenian'; }
+  body *[lang^= 'as']:before { content: 'Assamese'; }
+  body *[lang^= 'av']:before { content: 'Avaric'; }
+  body *[lang^= 'ae']:before { content: 'Avestan'; }
+  body *[lang^= 'ay']:before { content: 'Aymara'; }
+  body *[lang^= 'az']:before { content: 'Azerbaijani'; }
+  body *[lang^= 'bm']:before { content: 'Bambara'; }
+  body *[lang^= 'ba']:before { content: 'Bashkir'; }
+  body *[lang^= 'eu']:before { content: 'Basque'; }
+  body *[lang^= 'be']:before { content: 'Belarusian'; }
+  body *[lang^= 'bn']:before { content: 'Bengali (Bangla)'; }
+  body *[lang^= 'bh']:before { content: 'Bihari'; }
+  body *[lang^= 'bi']:before { content: 'Bislama'; }
+  body *[lang^= 'bs']:before { content: 'Bosnian'; }
+  body *[lang^= 'br']:before { content: 'Breton'; }
+  body *[lang^= 'bg']:before { content: 'Bulgarian'; }
+  body *[lang^= 'my']:before { content: 'Burmese'; }
+  body *[lang^= 'ca']:before { content: 'Catalan'; }
+  body *[lang^= 'ch']:before { content: 'Chamorro'; }
+  body *[lang^= 'ce']:before { content: 'Chechen'; }
+  body *[lang^= 'ny']:before { content: 'Chichewa, Chewa, Nyanja'; }
+  body *[lang^= 'zh']:before { content: 'Chinese'; }
+  body *[lang^= 'zh-Hans']:before { content: 'Chinese (Simplified)'; }
+  body *[lang^= 'zh-Hant']:before { content: 'Chinese (Traditional)'; }
+  body *[lang^= 'cv']:before { content: 'Chuvash'; }
+  body *[lang^= 'kw']:before { content: 'Cornish'; }
+  body *[lang^= 'co']:before { content: 'Corsican'; }
+  body *[lang^= 'cr']:before { content: 'Cree'; }
+  body *[lang^= 'hr']:before { content: 'Croatian'; }
+  body *[lang^= 'cs']:before { content: 'Czech'; }
+  body *[lang^= 'da']:before { content: 'Danish'; }
+  body *[lang^= 'dv']:before { content: 'Divehi, Dhivehi, Maldivian'; }
+  body *[lang^= 'nl']:before { content: 'Dutch'; }
+  body *[lang^= 'dz']:before { content: 'Dzongkha'; }
+  body *[lang^= 'en']:before { content: 'English'; }
+  body *[lang^= 'eo']:before { content: 'Esperanto'; }
+  body *[lang^= 'et']:before { content: 'Estonian'; }
+  body *[lang^= 'ee']:before { content: 'Ewe'; }
+  body *[lang^= 'fo']:before { content: 'Faroese'; }
+  body *[lang^= 'fj']:before { content: 'Fijian'; }
+  body *[lang^= 'fi']:before { content: 'Finnish'; }
+  body *[lang^= 'fr']:before { content: 'French'; }
+  body *[lang^= 'ff']:before { content: 'Fula, Fulah, Pulaar, Pular'; }
+  body *[lang^= 'gl']:before { content: 'Galician'; }
+  body *[lang^= 'gd']:before { content: 'Gaelic (Scottish)'; }
+  body *[lang^= 'gv']:before { content: 'Gaelic (Manx)'; }
+  body *[lang^= 'ka']:before { content: 'Georgian'; }
+  body *[lang^= 'de']:before { content: 'German'; }
+  body *[lang^= 'el']:before { content: 'Greek'; }
+  body *[lang^= 'kl']:before { content: 'Greenlandic'; }
+  body *[lang^= 'gn']:before { content: 'Guarani'; }
+  body *[lang^= 'gu']:before { content: 'Gujarati'; }
+  body *[lang^= 'ht']:before { content: 'Haitian Creole'; }
+  body *[lang^= 'ha']:before { content: 'Hausa'; }
+  body *[lang^= 'he']:before { content: 'Hebrew'; }
+  body *[lang^= 'hz']:before { content: 'Herero'; }
+  body *[lang^= 'hi']:before { content: 'Hindi'; }
+  body *[lang^= 'ho']:before { content: 'Hiri Motu'; }
+  body *[lang^= 'hu']:before { content: 'Hungarian'; }
+  body *[lang^= 'is']:before { content: 'Icelandic'; }
+  body *[lang^= 'io']:before { content: 'Ido'; }
+  body *[lang^= 'ig']:before { content: 'Igbo'; }
+  body *[lang^= 'id']:before { content: 'Indonesian'; }
+  body *[lang^= 'in']:before { content: 'Indonesian'; }
+  body *[lang^= 'ia']:before { content: 'Interlingua'; }
+  body *[lang^= 'ie']:before { content: 'Interlingue'; }
+  body *[lang^= 'iu']:before { content: 'Inuktitut'; }
+  body *[lang^= 'ik']:before { content: 'Inupiak'; }
+  body *[lang^= 'ga']:before { content: 'Irish'; }
+  body *[lang^= 'it']:before { content: 'Italian'; }
+  body *[lang^= 'ja']:before { content: 'Japanese'; }
+  body *[lang^= 'jv']:before { content: 'Javanese'; }
+  body *[lang^= 'kl']:before { content: 'Kalaallisut, Greenlandic'; }
+  body *[lang^= 'kn']:before { content: 'Kannada'; }
+  body *[lang^= 'kr']:before { content: 'Kanuri'; }
+  body *[lang^= 'ks']:before { content: 'Kashmiri'; }
+  body *[lang^= 'kk']:before { content: 'Kazakh'; }
+  body *[lang^= 'km']:before { content: 'Khmer'; }
+  body *[lang^= 'ki']:before { content: 'Kikuyu'; }
+  body *[lang^= 'rw']:before { content: 'Kinyarwanda (Rwanda)'; }
+  body *[lang^= 'rn']:before { content: 'Kirundi'; }
+  body *[lang^= 'ky']:before { content: 'Kyrgyz'; }
+  body *[lang^= 'kv']:before { content: 'Komi'; }
+  body *[lang^= 'kg']:before { content: 'Kongo'; }
+  body *[lang^= 'ko']:before { content: 'Korean'; }
+  body *[lang^= 'ku']:before { content: 'Kurdish'; }
+  body *[lang^= 'kj']:before { content: 'Kwanyama'; }
+  body *[lang^= 'lo']:before { content: 'Lao'; }
+  body *[lang^= 'la']:before { content: 'Latin'; }
+  body *[lang^= 'lv']:before { content: 'Latvian (Lettish)'; }
+  body *[lang^= 'li']:before { content: 'Limburgish ( Limburger)'; }
+  body *[lang^= 'ln']:before { content: 'Lingala'; }
+  body *[lang^= 'lt']:before { content: 'Lithuanian'; }
+  body *[lang^= 'lu']:before { content: 'Luga-Katanga'; }
+  body *[lang^= 'lg']:before { content: 'Luganda, Ganda'; }
+  body *[lang^= 'lb']:before { content: 'Luxembourgish'; }
+  body *[lang^= 'gv']:before { content: 'Manx'; }
+  body *[lang^= 'mk']:before { content: 'Macedonian'; }
+  body *[lang^= 'mg']:before { content: 'Malagasy'; }
+  body *[lang^= 'ms']:before { content: 'Malay'; }
+  body *[lang^= 'ml']:before { content: 'Malayalam'; }
+  body *[lang^= 'mt']:before { content: 'Maltese'; }
+  body *[lang^= 'mi']:before { content: 'Maori'; }
+  body *[lang^= 'mr']:before { content: 'Marathi'; }
+  body *[lang^= 'mh']:before { content: 'Marshallese'; }
+  body *[lang^= 'mo']:before { content: 'Moldavian'; }
+  body *[lang^= 'mn']:before { content: 'Mongolian'; }
+  body *[lang^= 'na']:before { content: 'Nauru'; }
+  body *[lang^= 'nv']:before { content: 'Navajo'; }
+  body *[lang^= 'ng']:before { content: 'Ndonga'; }
+  body *[lang^= 'nd']:before { content: 'Northern Ndebele'; }
+  body *[lang^= 'ne']:before { content: 'Nepali'; }
+  body *[lang^= 'no']:before { content: 'Norwegian'; }
+  body *[lang^= 'nb']:before { content: 'Norwegian bokmÃ¥l'; }
+  body *[lang^= 'nn']:before { content: 'Norwegian nynorsk'; }
+  body *[lang^= 'ii']:before { content: 'Nuosu'; }
+  body *[lang^= 'oc']:before { content: 'Occitan'; }
+  body *[lang^= 'oj']:before { content: 'Ojibwe'; }
+  body *[lang^= 'cu']:before { content: 'Old Church Slavonic, Old Bulgarian'; }
+  body *[lang^= 'or']:before { content: 'Oriya'; }
+  body *[lang^= 'om']:before { content: 'Oromo (Afaan Oromo)'; }
+  body *[lang^= 'os']:before { content: 'Ossetian'; }
+  body *[lang^= 'pi']:before { content: 'PÄli'; }
+  body *[lang^= 'ps']:before { content: 'Pashto, Pushto'; }
+  body *[lang^= 'fa']:before { content: 'Persian (Farsi)'; }
+  body *[lang^= 'pl']:before { content: 'Polish'; }
+  body *[lang^= 'pt']:before { content: 'Portuguese'; }
+  body *[lang^= 'pa']:before { content: 'Punjabi (Eastern)'; }
+  body *[lang^= 'qu']:before { content: 'Quechua'; }
+  body *[lang^= 'rm']:before { content: 'Romansh'; }
+  body *[lang^= 'ro']:before { content: 'Romanian'; }
+  body *[lang^= 'ru']:before { content: 'Russian'; }
+  body *[lang^= 'se']:before { content: 'Sami'; }
+  body *[lang^= 'sm']:before { content: 'Samoan'; }
+  body *[lang^= 'sg']:before { content: 'Sango'; }
+  body *[lang^= 'sa']:before { content: 'Sanskrit'; }
+  body *[lang^= 'sr']:before { content: 'Serbian'; }
+  body *[lang^= 'sh']:before { content: 'Serbo-Croatian'; }
+  body *[lang^= 'st']:before { content: 'Sesotho'; }
+  body *[lang^= 'tn']:before { content: 'Setswana'; }
+  body *[lang^= 'sn']:before { content: 'Shona'; }
+  body *[lang^= 'ii']:before { content: 'Sichuan Yi'; }
+  body *[lang^= 'sd']:before { content: 'Sindhi'; }
+  body *[lang^= 'si']:before { content: 'Sinhalese'; }
+  body *[lang^= 'ss']:before { content: 'Siswati'; }
+  body *[lang^= 'sk']:before { content: 'Slovak'; }
+  body *[lang^= 'sl']:before { content: 'Slovenian'; }
+  body *[lang^= 'so']:before { content: 'Somali'; }
+  body *[lang^= 'nr']:before { content: 'Southern Ndebele'; }
+  body *[lang^= 'es']:before { content: 'Spanish'; }
+  body *[lang^= 'su']:before { content: 'Sundanese'; }
+  body *[lang^= 'sw']:before { content: 'Swahili (Kiswahili)'; }
+  body *[lang^= 'ss']:before { content: 'Swati'; }
+  body *[lang^= 'sv']:before { content: 'Swedish'; }
+  body *[lang^= 'tl']:before { content: 'Tagalog'; }
+  body *[lang^= 'ty']:before { content: 'Tahitian'; }
+  body *[lang^= 'tg']:before { content: 'Tajik'; }
+  body *[lang^= 'ta']:before { content: 'Tamil'; }
+  body *[lang^= 'tt']:before { content: 'Tatar'; }
+  body *[lang^= 'te']:before { content: 'Telugu'; }
+  body *[lang^= 'th']:before { content: 'Thai'; }
+  body *[lang^= 'bo']:before { content: 'Tibetan'; }
+  body *[lang^= 'ti']:before { content: 'Tigrinya'; }
+  body *[lang^= 'to']:before { content: 'Tonga'; }
+  body *[lang^= 'ts']:before { content: 'Tsonga'; }
+  body *[lang^= 'tr']:before { content: 'Turkish'; }
+  body *[lang^= 'tk']:before { content: 'Turkmen'; }
+  body *[lang^= 'tw']:before { content: 'Twi'; }
+  body *[lang^= 'ug']:before { content: 'Uyghur'; }
+  body *[lang^= 'uk']:before { content: 'Ukrainian'; }
+  body *[lang^= 'ur']:before { content: 'Urdu'; }
+  body *[lang^= 'uz']:before { content: 'Uzbek'; }
+  body *[lang^= 've']:before { content: 'Venda'; }
+  body *[lang^= 'vi']:before { content: 'Vietnamese'; }
+  body *[lang^= 'vo']:before { content: 'VolapÃ¼k'; }
+  body *[lang^= 'wa']:before { content: 'Wallon'; }
+  body *[lang^= 'cy']:before { content: 'Welsh'; }
+  body *[lang^= 'wo']:before { content: 'Wolof'; }
+  body *[lang^= 'fy']:before { content: 'Western Frisian'; }
+  body *[lang^= 'xh']:before { content: 'Xhosa'; }
+  body *[lang^= 'ji']:before { content: 'Yiddish'; }
+  body *[lang^= 'yi']:before { content: 'Yiddish'; }
+  body *[lang^= 'yo']:before { content: 'Yoruba'; }
+  body *[lang^= 'za']:before { content: 'Zhuang, Chuang'; }
+  body *[lang^= 'zu']:before { content: 'Zulu'; }
