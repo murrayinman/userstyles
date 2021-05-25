@@ -1,0 +1,574 @@
+/* ==UserStyle==
+@name         Google Chat Dark Sea Theme
+@namespace    google.com chat
+@version      1.0.0
+@description  Give Google Chat a darker theme with deep greenish blues
+@supportURL   https://github.com/murrayinman/userstyles/issues
+@author       Murray Inman
+@license      CC0-1.0
+==/UserStyle== */
+
+/* 
+  Modified and extended from Christopher Bargren's "Google Chat Solarized Dark" user style at 
+  https://userstyles.org/styles/156817/google-chat-solarized-dark
+*/
+
+@-moz-document url-prefix("https://mail.google.com/chat/"), domain("chat.google.com") {
+:root {
+  --base04: rgba(0, 23, 29, 1);
+  --base03: rgba(0, 43, 54, 1);
+  --base02: rgba(7, 54, 66, 1);
+  --base01: rgba(88, 110, 117, 1);
+  --base00: rgba(101, 123, 131, 1);
+  --base0: rgba(131, 148, 150, 1);
+  --base1: rgba(147, 161, 161, 1);
+  --base2: rgba(238, 232, 213, 1);
+  --base3: rgba(253, 246, 227, 1);
+  --yellow: rgba(181, 137, 0, 1);
+  --orange: rgba(203, 75, 22, 1);
+  --red: rgba(220, 50, 47, 1);
+  --magenta: rgba(211, 54, 130, 1);
+  --violet: rgba(108, 113, 196, 1);
+  --blue: rgba(38, 139, 210, 1);
+  --cyan: rgba(42, 161, 152, 1);
+  --green: rgba(133, 153, 0, 1);
+}
+
+body,
+.nH {
+  background-color: var(--base04);
+  color: var(--base2);
+}
+
+/* Loading Screen */
+.bzJiD:not(.eO2Zfd):before {
+  background-color: var(--base01);
+  opacity: 0.96;
+}
+
+/* Header Bar */
+.DWzK6d,
+.Xs68kb {
+  background-color: var(--base02);
+}
+
+/* Chat Logo */
+#XMLID_8_-Clipped {
+  fill: var(--base3) !important;
+  opacity: 0.7;
+}
+
+/* Group Name */
+.dKv0S .i5PBGe {
+  color: var(--base2);
+}
+
+.i5PBGe.iWO5td,
+.i5PBGe:active,
+.i5PBGe:focus,
+.i5PBGe:hover {
+  background-color: var(--base03);
+  color: var(--base3);
+}
+
+.xzTN8b {
+  background-color: var(--base02);
+}
+
+.i5PBGe:hover .xzTN8b,
+.i5PBGe:focus .xzTN8b,
+.i5PBGe.u3bW4e .xzTN8b,
+.i5PBGe.iWO5td .xzTN8b,
+.S6YNQd {
+  color: var(--base3);
+  fill: var(--base3);
+}
+
+.UZl8cf {
+  color: var(--base3);
+}
+
+.kjWKTd {
+  color: var(--base0)
+}
+
+/* Switch Group Dropdown */
+.JPdR6b {
+  background-color: var(--base0);
+  color: var(--base02) !Important;
+  fill: var(--base02) !Important;
+}
+/* Groups */
+.z80M1 {
+  color: var(--base3);
+}
+/* Groups Hovered */
+.z80M1.FwR7Pc {
+  background-color: var(--base02);
+}
+/* status option title */
+.KrrIce {
+  color: var(--base2);
+}
+/* status option subtext time */
+.OAi7ze {
+  color: var(--base1);
+}
+
+/* Group Icons */
+/* .o50UJf {
+  fill: var(--cyan);
+} */
+/* Search/Gear Icons */
+.Nj8aCb.Nj8aCb {
+  color: var(--base01);
+  fill: var(--base01);
+}
+.Nj8aCb:hover,
+.Nj8aCb:focus {
+  color: var(--base02) !Important;
+  fill: var(--base02) !Important;
+  background-color: var(--base2) !Important;
+}
+
+/* Feedback Wrapper */
+.TaudIc {
+  color: var(--base0);
+  fill: var(--base0);
+}
+
+/* Left Nav Bar Wrapper */
+.X9KLPc {
+  background-color: var(--base03);
+  border-right-color: var(--base1);
+}
+
+/* Find People Hover */
+.GbZFNe:focus,
+.GbZFNe:hover,
+.GbZFNe:hover:focus {
+  background-color: #fffcf5;
+  box-shadow: none;
+  color: var(--base03) !Important;
+}
+.HLTcjb,
+.vsxzuf {
+  color: var(--base03);
+  fill: var(--base03);
+}
+
+/* Group Label */
+.t5F5nf {
+  color: var(--base2);
+}
+
+/* Group Label w/ New Message */
+.PL5Wwe.H7du2 .t5F5nf {
+  color: var(--base3);
+}
+
+/* Group */
+.PL5Wwe:focus,
+.PL5Wwe:hover:not(.tuKyod),
+.tuKyod:hover .LoYJxb,
+.dQ2Tsf[aria-selected="true"] {
+  background-color: var(--base02);
+}
+
+/* Selected Group */
+.PL5Wwe.KKjvXb:not(.tuKyod),
+.PL5Wwe.qs41qe:not(.tuKyod) {
+  background-color: var(--base01);
+}
+
+.FS4hgd.iWO5td .ojqkvd,
+.FS4hgd.iWO5td,
+.dHI9xe.qs41qe,
+.dHI9xe.KKjvXb.KKjvXb,
+.dHI9xe.qs41qe .ojqkvd.ojqkvd,
+.dHI9xe.KKjvXb.KKjvXb .ojqkvd {
+  color: var(--base3);
+  fill: var(--base3);
+}
+
+.PL5Wwe.qs41qe:not(.H7du2) .kjWKTd {
+  color: var(--base2);
+}
+
+.PL5Wwe.KKjvXb .t5F5nf,
+.PL5Wwe.KKjvXb .sFuxxd,
+.PL5Wwe.qs41qe .t5F5nf,
+.PL5Wwe.qs41qe .sFuxxd,
+.GSEpfc .t5F5nf {
+  color: var(--base3);
+}
+
+/* Status Menu */
+.Nj9fLc,
+.gWTIDe,
+.Yc,
+.Yb.dIH7rb .Ye {
+  color: var(--base2);
+  fill: var(--base2);
+}
+.Yb:not(.abs):hover {
+  background-color: var(--base03);
+}
+/* status panel in app */
+.JPdR6b.kKYuJe.qjTEB {
+  background-color: var(--base04);
+}
+.kKYuJe .PkxUw {
+  color: var(--base2);
+/*   background-color: var(--base02); */
+}
+
+
+/* Keyboard shortcut tooltip */
+.RM9ulf {
+  color: var(--base03);
+}
+
+.R8qYlc {
+  background-color: var(--base3);
+}
+/* Find person search */
+.d6pS5 {
+  box-shadow: none;
+  background-color: var(--base2)
+}
+.GbZFNe,
+.d6pS5:not(.gUxhRe) .uDjj8c {
+  box-shadow: none;
+}
+/* Left Add Person Bar */
+.d6pS5.i6oIBe .W2x1cc {
+  background: var(--base02);
+}
+
+.D3DXDc {
+  fill: var(--base2);
+}
+
+.Uk0Bfe .snByac {
+  color: var(--base2);
+}
+
+.yoV6yd {
+  background: var(--base03);
+}
+
+.tOToeb {
+  border-bottom-color: var(--base2);
+}
+
+.dQ2Tsf .NXfF8b,
+.dQ2Tsf .ZTmjQb {
+  color: var(--base2);
+}
+
+.jAwRLb {
+  fill: var(--cyan);
+}
+
+/* Main Section */
+.WQKmIb .Bl2pUd,
+.Bl2pUd {
+  background-color: var(--base04);
+}
+
+.A2BXPe {
+  color: var(--base2);
+}
+
+.ZlQIRd,
+.ZGAbn {
+  fill: var(--cyan);
+}
+
+.pihjkd {
+  color: var(--cyan);
+}
+/* Main Section Loading Overlay */
+.hFNO2d.JpY6Fd {
+  opacity: 0.7;
+  background-color: var(--base04);
+}
+.ajp,
+.ajp svg path {
+  background-color: var(--base2);
+  fill: var(--base02);
+}
+
+/* Room Header */
+.tCUB4c {
+  color: var(--base3);
+}
+
+/* Room Created Note */
+.qnDW3d {
+  color: var(--base1);
+}
+
+.zFe2Ef:not(.RDPZE) .v6TC2e {
+  fill: var(--base3)
+}
+
+/* Conversation Person Name */
+.cmEq8b .Z4BnXb .njhDLd {
+  color: var(--base00)
+}
+/* Conversations */
+.dsoUjb {
+  background-color: var(--base03);
+}
+/* Convos in Groups */
+.WQKmIb .Bl2pUd .dsoUjb {
+  background-color: var(--base04);
+}
+
+.XbbXmb.zzVqCe .nF6pT,
+.jGyvbd .jO0Dzb {
+  background-color: transparent;
+}
+
+.oGsu4,
+.zPVzl {
+  background-color: transparent;
+}
+
+.cmEq8b .Zc1Emd,
+.cmEq8b .Z4BnXb,
+.zPVzl {
+  color: var(--base1);
+}
+
+.nF6pT.FwR7Pc .Hj5Fxb,
+.hu21Y:hover {
+  background-color: var(--base03);
+}
+
+.WQKmIb .byY7Yb {
+  background-color: var(--base03)
+}
+
+/* Message Group Icons */
+.orLAid {
+  fill: var(--base00);
+  color: var(--base00);
+}
+
+.orLAid:hover,
+.orLAid.u3bW4e {
+  fill: rgba(255, 255, 255, 0.54);
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.nF6pT.FwR7Pc .orLAid,
+.hu21Y:hover .orLAid,
+.orLAid:focus {}
+
+/* Code Blocks */
+.FMTudf,
+.U8d2H {
+  background-color: var(--base02);
+  color: var(--base2);
+  border-color: var(--base1);
+  font-size: 0.9rem
+}
+
+/* Notification Icon */
+.otWEZc {
+  fill: var(--red);
+}
+
+/* New Message Box */
+.bzJiD .IEIJqd.qs41qe .XganBc,
+.IEIJqd .I0LFzc {
+  background-color: var(--base03);
+}
+
+.BScnzc {
+  color: var(--base1);
+}
+
+.XweIZc {
+  color: var(--base01);
+}
+
+/* Reply Box */
+.vmpzOc.eO2Zfd {
+  background-color: var(--base03);
+}
+
+/* History Tab */
+.IEIJqd.Myox3c .D6C1Qe {
+  background-color: var(--base03);
+}
+
+.lljjAe {
+  color: var(--cyan);
+}
+
+.lljjAe.X0MG1d {
+  color: var(--blue);
+}
+
+/* Keyboard shortcuts window */
+.g3VIld {
+  background-color: var(--base03);
+}
+
+.jfkEkc:hover {
+  background-color: var(--base02);
+}
+
+/* reply bar */
+.dJ9vNe {
+  background-color: var(--base1);
+  border-radius: 10px;
+}
+/* reply bar text */
+.PhFuQe.yXgmRe .dJ9vNe .BScnzc {
+  color: var(--base04)
+}
+
+/* reply bar icons */
+.fKz7Od,
+.aOHsTc {
+  color: var(--base1);
+  fill: var(--base02);
+}
+
+/* Top bar */
+.QTQg5e {
+  background: var(--base03);
+  color: var(--base02) !Important;
+  fill: var(--base02) !Important;
+}
+.nHjhsd {
+  fill: var(--base0);
+}
+/* Search bar */
+.gb_Ue {
+  background-color: var(--base03);
+  fill: var(--base02);
+  color: var(--base3);
+  filter: brightness(0.7)
+}
+.gb_Ue input.gb_ff::-webkit-input-placeholder {
+  color: var(--base1);
+}
+.gb_Ue button svg {
+  fill: var(--base0)
+}
+
+/* top bar icons */
+.zo a.gb_ve svg,
+.FI a.FH svg,
+.gb_Af a svg,
+.gb_qa .gb_vc svg {
+  fill: var(--base01);
+}
+/* bar icons hover */
+.t6:not(.z4):focus,
+.t6:not(.z4):hover,
+.t6:not(.z4):active,
+.t6.zH,
+.FH:not(.Xx):hover,
+.FH:not(.Xx):focus,
+.FH:not(.Xx):active,
+.FH[aria-expanded="true"],
+.gb_C .gb_D:hover,
+.gb_C .gb_D:focus,
+.gb_C .gb_D:active,
+.gb_vc:hover,
+.gb_vc:focus,
+.gb_vc:active {
+  background-color: var(--base2)
+}
+
+/* Unread message */
+.PL5Wwe.H7du2:not(.qs41qe) .kjWKTd {
+  color: var(--yellow);
+}
+.PL5Wwe.qs41qe.H7du2 .kjWKTd {
+  color: var(--base03);
+}
+
+.CmMf8e,
+.gXpIse,
+.Raz8e {
+  color: var(--base0);
+  fill: var(--base0);
+}
+
+.k7aBq,
+.V6.CL {
+  border-bottom: 0.5px solid var(--base02);
+  color: var(--base1);
+  fill: var(--base1);
+}
+.XR {
+  filter: invert(1);
+}
+.gb_qa svg,
+.gb_Bc svg,
+.gb_Xc .gb_6d,
+.gb_Nc .gb_6d {
+  color: var(--base02);
+  fill: var(--base02);
+}
+
+.vIO7af {
+  background-color: var(--base04);
+}
+
+/* group name at top */
+.dKv0S .i5PBGe.U26fgb,
+.nk7hB,
+.wWf0Bc,
+.nk7hB .cAW0Vc,
+.W44DQ .ejd9mb,
+.o50UJf {
+  color: var(--base2);
+  fill: var(--base0);
+}
+/* group member count */
+.sNyyib .x1jjEb {
+  color: var(--base0);
+}
+
+/* name */
+.njhDLd {
+  color: var(--base2);
+}
+.FS4hgd.iWO5td.iWO5td,
+div .dHI9xe.KKjvXb,
+div .dHI9xe.qs41qe {
+  background-color: var(--base01);
+}
+
+/* Name card */
+.FS4hgd.iWO5td.iWO5td {
+  background-color: var(--base03);
+}
+/* menu panel */
+.JPdR6b.cpiW7b.qjTEB {
+  background-color: var(--base02);
+}
+/* menu main options */
+.R5Q1ue .XaOSkb {
+  color: var(--base3);
+}
+/* menu subtext */
+.R5Q1ue .FCx0Ne {
+  color: var(--base1);
+}
+/* menu icons */
+.R5Q1ue .o50UJf {
+  color: var(--base01);
+}
+
+/* End of userscript code */
+}
