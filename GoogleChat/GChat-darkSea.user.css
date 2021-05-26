@@ -569,6 +569,10 @@ div .dHI9xe.qs41qe {
 .R5Q1ue .o50UJf {
   color: var(--base01);
 }
+/* Fix the new even row coloring */
+.XbbXmb.zzVqCe .nF6pT, .dsoUjb .jGyvbd .jO0Dzb {
+  background-color: var(--base03);
+}
 
 /* End of userscript code */
 }
