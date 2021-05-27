@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         KDB element style
+@namespace    reiche.us
+@author       Jason Reiche
+@version      20171120.0.1
+@description  Add indicator to any element that has a hreflang attribute
+@supportURL   https://github.com/jasonreiche/userstyles/issues
+
+==/UserStyle== */
+  /* Show lang attribute indicator- 
+     Language Codes: https://www.w3schools.com/tags/ref_language_codes.asp
+      */
+  kbd {
+    padding: 0.05em 0.4em;
+    border: 1px solid #ccc;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    text-shadow: 0 1px 0 #fff;
+    line-height: 1.4;
+    white-space: nowrap;
+    vertical-align: text-top;
+  }
