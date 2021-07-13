@@ -583,9 +583,33 @@ div .dHI9xe.qs41qe {
   background-color: var(--base03);
 }
 /* Fix the background color for selected messages */
-  .nF6pT.FwR7Pc .iKCcE, .VYsRpc:hover {
-    background-color: none !important;
-  }
+.nF6pT.FwR7Pc .iKCcE, .VYsRpc:hover {
+  background-color: none !important;
+}
+/* Fix some of the Room UI elements*/
+  /* Tab menu */
+.UDyRYe, .c0lDWe {
+  background-color: var(--base01);
+  border-bottom: var(--base01);
+  color: var(--base1);
+ }
+/* Selected tab underline */
+.ItO8Dd {
+  background-color: var(--base02);
+}
+  /* Tab text */
+.XXAR0 {
+  color: var(--base2);
+}
+  /* Tab hover color */
+.wmFscd.DWWcKd-OomVLb-LgbsSe.DWWcKd-OomVLb-LgbsSe-ZmdkE {
+  background-color: var(--base03);
+  border-radius: 0 0 0 0;
+}
+  /* Selected Tab underline hover */
+.wmFscd.DWWcKd-OomVLb-LgbsSe-gk6SMd.DWWcKd-OomVLb-LgbsSe-ZmdkE .ItO8Dd{
+  background-color: var(--base2);
+}
 
 /* End of userscript code */
 }
