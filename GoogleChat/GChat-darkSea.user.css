@@ -431,9 +431,15 @@ body,
 }
 /* reply bar text */
 .PhFuQe.yXgmRe .dJ9vNe .BScnzc {
-  color: var(--base04)
+  color: var(--base04);
 }
-
+@media (max-width: 375px) {
+  .tRuV8b .dJ9vNe.DbQnIe .oAzRtb {
+    color: var(--base02);
+  }
+  .tRuV8b .vW3yif.DbQnIe .cXQBz, .tRuV8b .dJ9vNe.DbQnIe .cXQBz {
+    color: var(--base02);
+}
 /* reply bar icons */
 .fKz7Od,
 .aOHsTc {
@@ -559,7 +565,7 @@ div .dHI9xe.qs41qe {
   background-color: var(--base02);
 }
 /* menu main options */
-.R5Q1ue .XaOSkb {
+.R5Q1ue .XaOSkb, .jO7h3c {
   color: var(--base3);
 }
 /* menu subtext */
