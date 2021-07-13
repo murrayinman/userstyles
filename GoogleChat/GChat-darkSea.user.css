@@ -434,9 +434,11 @@ body,
   color: var(--base04);
 }
 @media (max-width: 375px) {
+  /* text in textbox */
   .tRuV8b .dJ9vNe.DbQnIe .oAzRtb {
     color: var(--base02);
   }
+  /* plus button for textbox actions */
   .tRuV8b .vW3yif.DbQnIe .cXQBz, .tRuV8b .dJ9vNe.DbQnIe .cXQBz {
     color: var(--base02);
 }
@@ -580,6 +582,10 @@ div .dHI9xe.qs41qe {
 .XbbXmb.zzVqCe .nF6pT, .dsoUjb .jGyvbd .jO0Dzb {
   background-color: var(--base03);
 }
+/* Fix the background color for selected messages */
+  .nF6pT.FwR7Pc .iKCcE, .VYsRpc:hover {
+    background-color: none !important;
+  }
 
 /* End of userscript code */
 }
