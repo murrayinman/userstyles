@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           CA Icon Table for Printing
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Formats the CA Icon Set Page for better printing.
+@author         Murray Inman
+@updateURL    https://github.com/murrayinman/userstyles/raw/main/GoogleChat/GChat-darkSea.user.css
+@supportURL   https://github.com/murrayinman/userstyles/issues
+@license      CC0-1.0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://riosalado.coursearc.com/course-arc-dashboard/settings/icons/") {
+  tr td:last-of-type,
+  tr th:last-of-type {
+    display: none;
+  }
+
+  .main.inner nav {
+    display: none;
+  }
+
+  table.clear.table.table-bordered.table-shaded.table-manage tr {
+    break-inside: avoid;
+  }
+
+  .col-md-8 h1 {
+    margin-bottom: 0 !important;
+  }
+
+  .col-md-4.right-button,
+  a.btn.btn-success[href*="icons/single"] {
+    display: none;
+  }
+
+  .icons-preview {
+    border: none;
+  }
+
+  @media print {
+    .table th {
+      background-color: #323232 !important;
+      color: #ffffff !important;
+    }
+  }
+}
