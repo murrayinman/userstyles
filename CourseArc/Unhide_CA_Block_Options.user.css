@@ -9,7 +9,7 @@
 @license        CC0-1.0
 ==/UserStyle== */
 
-@-moz-document domain("riosalado.coursearc.com") {
+@-moz-document domain("riosalado.coursearc.com"), domain("riosalado.coursearc.review") {
   ul#ccm-block-type-list li.ccm-block-type.ca_certificate,
   ul#ccm-block-type-list li.ccm-block-type.ca_cloze {
     display: list-item !important;
