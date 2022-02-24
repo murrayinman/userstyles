@@ -1,0 +1,41 @@
+/* ==UserStyle==
+@name           Unhide the CA Block Options
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Reveals that which has been hidden
+@author         Murray Inman
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/CourseArc/Unhide_CA_Block_Options.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@license        CC0-1.0
+==/UserStyle== */
+
+@-moz-document domain("riosalado.coursearc.com") {
+  ul#ccm-block-type-list li.ccm-block-type.ca_certificate,
+  ul#ccm-block-type-list li.ccm-block-type.ca_cloze {
+    display: list-item !important;
+    background-color: hsla(25, 100%, 60%, .5);
+  }
+  ul#ccm-block-type-list a {
+    color: hsl(0, 0%, 0%);
+  }
+  ul#ccm-block-type-list a img._pendo-badge._pendo-badge_ {
+    margin-left: 1em;
+    position: absolute;
+    right: 2em;
+    border: 1px solid hsla(0, 0%, 0%, .4);
+    border-radius: 50%;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075);
+    background-color: rgba(50, 0, 130, .4);
+    padding: 0px;
+  }
+  ul#ccm-block-type-list li.ccm-block-type.ca_certificate a::after,
+  ul#ccm-block-type-list li.ccm-block-type.ca_cloze a::after {
+    content: "Hidden Option";
+    font-variant: small-caps;
+    position: absolute;
+    right: 5em;
+    font-size: 0.8em;
+  }
+}
