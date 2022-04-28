@@ -1,0 +1,105 @@
+/* ==UserStyle==
+@name           Pretty Print RL Student Gradebook
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Applies a nice print style for a student's gradebook in RioLearn
+@author         Murray Inman
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/RioLearn/Pretty_Print_RL_Gradebook.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@license        CC0-1.0
+==/UserStyle== */
+@-moz-document url-prefix("https://www.riolearn.org/riowebapps/main/course/studentgradebook") {
+  @media print {
+    div#RibbonWrapper,
+    .course-nav,
+    div#Header,
+    div#Head-Nav,
+    a.ControlHelp,
+    a#btnPrev,
+    a#btnNext,
+    button#btnEnrollmentAction,
+    ul.k-reset.k-tabstrip-items,
+    .k-button,
+    th[data-title="Status"],
+    th[data-title="To Grade"],
+    th:last-of-type,
+    tr.k-master-row td:nth-of-type(2),
+    tr.k-master-row td:nth-of-type(3),
+    tr.k-master-row td:nth-of-type(7) {
+      display: none;
+    }
+
+    #Head-Title {font-weight: 600;}
+
+    .article-head h2 {padding: inherit; font-weight: 600;}
+
+    #Body-Inner {padding-top: 0.5em;}
+
+    .article-body, div#stdGradebookTabs-1 {padding: 0;}
+
+    #studentGradebookSummary, #studentGradeInfo {column-count: 2;}
+
+    .k-dropdown .k-select {visibility: hidden;}
+
+    .k-grid td {padding: 0.5em;}
+
+    a[href]:after {content: none;}
+
+    .k-grid-header th.k-header {
+      padding: 0.3em 0.7em;
+      background: #bdbdbd !IMPORTANT;
+      font-weight: 600;
+    }
+
+    .article-body h3 {
+      border: black solid;
+      border-width: 3px 0;
+      padding: 0.2em;
+      background-color: #cacaca !important;
+    }
+
+    .k-grid-footer,
+    .k-grid-footer td,
+    .k-grid-header,
+    .k-grid-header .k-header,
+    .k-autocomplete,
+    .k-block,
+    .k-content,
+    .k-dropdown-wrap,
+    .k-dropzone-active,
+    .k-filter-row > th,
+    .k-footer-template td,
+    .k-grid td,
+    .k-grid td.k-state-selected,
+    .k-grid-content-locked,
+    .k-grid-footer,
+    .k-grid-footer-locked,
+    .k-grid-footer-wrap,
+    .k-grid-header,
+    .k-grid-header-locked,
+    .k-grid-header-wrap,
+    .k-group,
+    .k-group-footer td,
+    .k-grouping-header,
+    .k-grouping-header .k-group-indicator,
+    .k-header,
+    .k-input,
+    .k-panel > .k-item > .k-link,
+    .k-panelbar .k-content,
+    .k-panelbar .k-panel,
+    .k-panelbar > .k-item > .k-link,
+    .k-popup.k-align .k-list .k-item:last-child,
+    .k-separator,
+    .k-slider-track,
+    .k-splitbar,
+    .k-state-default,
+    .k-state-default .k-select,
+    .k-state-disabled,
+    .k-toolbar,
+    .k-treemap-tile,
+    .k-upload-files,
+    .k-widget {
+      border-color: #000;
+    }
+  }
+}
