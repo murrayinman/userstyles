@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Show CA Accessible Block Buttons
 @namespace    github.com/openstyles/stylus
-@version      1.0.2
+@version      1.0.3
 @description  Makes the block editing buttons always display
 @updateURL    https://raw.githubusercontent.com/murrayinman/userstyles/main/CourseArc/CA_Show-Accessible-Block-Buttons.user.css
 @supportURL   https://github.com/murrayinman/userstyles/issues
@@ -9,7 +9,7 @@
 @license      CC0-1.0
 ==/UserStyle== */
 
-@-moz-document domain("riosalado.coursearc.com") {
+@-moz-document domain("coursearc.com") {
 /*  Make the accessible buttons show  */
   .accessible-block-add-menu button, .accessible-block-edit-menu button {
     position: static;
