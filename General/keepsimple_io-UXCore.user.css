@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name           keepsimple.io UX Core
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Improves the visual accessibility
+@author         Murray Inman
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/General/keepsimple_io-UXCore.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@license        CC0-1.0
+==/UserStyle== */
+
+@-moz-document url-prefix("https://keepsimple.io/uxcore") {
+  /* Bigger, bolder section titles */
+  svg[class^="UXCoreLayout_svg"] text[type=section-title] {
+    font-size: 30px;
+    opacity: 1;
+    font-weight: 700;
+    filter: brightness(0.5);
+  }
+}
