@@ -1,0 +1,140 @@
+/* ==UserStyle==
+@name           Darker docs.google.com
+@namespace      github.com/openstyles/stylus
+@version        1.0.5
+@description    Darkish mode for docs
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/Google/DarkishDocs.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@author         Murray Inman
+@license        CC0-1.0
+==/UserStyle== */
+
+@-moz-document domain("docs.google.com") {
+  /*  Color Variables  */
+    :root {
+    --myDarkWarm: hsl(218, 21%, 17%);
+    --myLighterWarm: hsl(0, 0%, 27%);
+    --myDarkCool: hsl(225, 6%, 13%);
+    --myLighterCool: hsl(225, 5%, 17%);
+    --myTeal: hsl(175, 65%, 52%);
+    --myDarkTeal: hsl(177, 46%, 29%);
+    --myLightText: hsl(216, 12%, 92%);
+    --myDarkText: hsl(210, 1%, 56%);
+    --myBlueText: hsl(205, 62%, 64%);
+    --myTealishBlueText: hsl(185, 31%, 51%);
+    --myOrangeText: hsl(23, 85%, 66%);
+  }
+  
+  /* Main Dark areas */
+  #docs-chrome,
+  .left-sidebar-container.pageless-format,
+  .docs-material #docs-header .docs-titlebar-buttons,
+  .docs-material #docs-toolbar-wrapper,
+  .left-sidebar-container-content {
+    background: var(--myDarkWarm);
+  }
+  #kix-appview.kix-appview .kix-appview-editor-container .kix-appview-editor {
+    background-color: var(--myDarkWarm) !important;
+    background-image: linear-gradient(var(--myDarkWarm), var(--myDarkCool)) !important;
+  }
+  /* Lighter Dark Areas */
+  .docs-material .goog-toolbar-button,
+  .docs-material .goog-toolbar-menu-button,
+  .docs-material .goog-toolbar-button,
+  .docs-material .goog-toolbar-combo-button,
+  .docs-material .goog-toolbar-menu-button {
+    background-color: var(--myLighterWarm);
+  }
+  /* Document page */
+  .kix-rotatingtilemanager-content .kix-canvas-tile-content {
+    /* Only affects the page color of editable pages */
+    background-color: hsl(0deg 0% 100% / 99%);
+  }
+  /* toolbarbuttons */
+  .docs-gm .docs-material .docs-icon-img:not(#docs-toolbar-mode-switcher .docs-icon-img) {
+    filter: brightness(2);
+  }
+  .docs-gm .docs-menubar .goog-control-hover,
+  .docs-gm .docs-menubar .goog-control-open {
+    background: var(--myDarkTeal);
+    color: var(--myLightText) !important;
+  }
+  .docs-title-input {
+    background-color: var(--myDarkCool);
+    color: var(--myLightText) !important;
+  }
+  .docs-parent-collections-container-outer {
+    color: var(--myLightText);
+  }
+  /* toolbar exemptions */
+  .docs-gm #kix-horizontal-ruler .docs-material .docs-icon-img:not([class^="docs-ruler-indent-"] .docs-icon-img),
+  .docs-gm .docs-material #docs-meet-in-editors-entrypointbutton .docs-icon-img.docs-icon-videocam-colored-24 {
+    filter: none;
+  }
+  .docs-gm .docs-horizontal-ruler {
+    background-color: var(--myDarkCool);
+  }
+  .docs-ruler-background-inner {
+    background-color: var(--myLightText);
+  }
+  #docs-meet-in-editors-entrypointbutton {
+    background-color: var(--myDarkCool)
+  }
+
+  /* toobar hovers*/
+  .docs-gm .docs-material .goog-toolbar-button-hover,
+  .docs-gm .docs-material .goog-toolbar-menu-button-hover,
+  .docs-gm .docs-material .goog-toolbar-combo-button-hover,
+  .docs-gm .docs-material .docs-toolbar-button-split-sympathy-hover,
+  .docs-gm .docs-material .docs-toolbar-split-create-button,
+  .docs-gm .docs-material .docs-toolbar-split-create-button.goog-toolbar-button-hover,
+  .docs-gm .docs-material .docs-toolbar-split-create-button.goog-toolbar-menu-button-hover .docs-gm .docs-material.trix-palette .goog-palette-cell-hover {
+    background-color: var(--myDarkCool);
+    color: var(--myLightText);
+  }
+  /* checked toolbars */
+  .docs-gm .docs-material .goog-toolbar-button-active,
+  .docs-gm .docs-material .goog-toolbar-button-checked,
+  .docs-gm .docs-material .goog-toolbar-button-selected,
+  .docs-gm .docs-material .goog-toolbar-combo-button-open,
+  .docs-gm .docs-material .goog-toolbar-menu-button-open,
+  .docs-gm .docs-material .docs-toolbar-split-create-button.goog-toolbar-button-active,
+  .docs-gm .docs-material .docs-toolbar-split-create-button.goog-toolbar-menu-button-active,
+  .docs-gm .docs-material .docs-toolbar-split-create-button.goog-toolbar-menu-button-open,
+  .docs-gm .docs-material.trix-palette .goog-palette-cell-selected {
+    background-color: var(--myDarkTeal);
+    color: var(--myTeal);
+  }
+
+
+  /* LightText */
+  .left-sidebar-container.pageless-format,
+  .outline-refresh.navigation-widget-unified-styling .navigation-item .navigation-item-level-0,
+  .outline-refresh.navigation-widget-unified-styling .navigation-item,
+  .docs-material .goog-toolbar-button,
+  .docs-material .goog-toolbar-menu-button,
+  .docs-gm .goog-toolbar-combo-button-input,
+  .docs-title-input-label {
+    color: var(--myLightText);
+  }
+  /* BlueText */
+  .outline-refresh.navigation-widget-unified-styling .location-indicator-highlight.navigation-item,
+  .outline-refresh.navigation-widget-unified-styling .location-indicator-highlight.navigation-item .navigation-item-level-0 {
+    color: var(--myBlueText);
+  }
+
+  /* DarkText */
+  .docs-gm .docs-menubar .goog-control,
+  .docs-material .goog-toolbar-button {
+    color: var(--myDarkText);
+  }
+  /* OrangeText Headings */
+  .navigation-widget-header {
+    color: var(--myOrangeText);
+  }
+
+  /* Main Editing Area */
+  .kix-appview-editor {
+    background-color: var(--myDarkWarm) !important;
+  }
+}
