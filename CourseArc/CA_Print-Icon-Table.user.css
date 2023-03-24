@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Pretty Print CA Icon Table
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.1
 @description    Formats the CA icon set page for better printing.
 @author         Murray Inman
 @updateURL    https://github.com/murrayinman/userstyles/raw/main/CourseArc/CA_Print-Icon-Table.user.css
@@ -9,7 +9,7 @@
 @license      CC0-1.0
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://riosalado.coursearc.com/course-arc-dashboard/settings/icons/") {
+@-moz-document url-prefix("https://riosalado.coursearc.com/course-arc-dashboard/settings/icons/"), url-prefix("https://riosalado.coursearc.com/index.php/course-arc-dashboard/settings/icons/") {
   tr td:last-of-type,
   tr th:last-of-type {
     display: none;
@@ -34,6 +34,24 @@
 
   .icons-preview {
     border: none;
+  }
+  
+  table-bordered > tbody > tr > th,
+  .table-bordered > tbody > tr > th,
+  table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > th,
+  table-bordered > thead > tr > td,
+  .table-bordered > thead > tr > td,
+  table-bordered > tbody > tr > td,
+  .table-bordered > tbody > tr > td,
+  table-bordered > tfoot > tr > td,
+  .table-bordered > tfoot > tr > td {
+    border-color: #2c3e50;
+  }
+
+  table.table-bordered > tbody > tr > td:first-of-type {
+    font-weight: 600;
+    background-color: hsl(210 29% 95% / 1);
   }
 
   @media print {
