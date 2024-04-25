@@ -1,0 +1,141 @@
+/* ==UserStyle==
+@name           Pretty Print the IRE Bb Course Syllabus
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Formats the syllabus page for better printing.
+@author         Murray Inman
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/RioLearn/Pretty_Print_Rio_Syllabus.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@license        CC0-1.0
+==/UserStyle== */
+@-moz-document url-prefix("https://matrix.riosalado.edu/RioWebApps/Public/Rio.SyllabusDefinition.UI/SyllabusRender.aspx") {
+  @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  @media screen, print {
+    /* Define the printed page */
+    @page {
+      size: letter;
+      margin: 0.75in 0.5in;
+
+      @bottom-right {
+        content: counter(page);
+        font-size: 0.8em;
+      }
+    }
+
+    /* Set up the overall text styling */
+    body {
+      font-family: "Atkinson Hyperlegible", sans-serif !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      font-size: 14px !important;
+      background-color: #fff !important;
+      border: none !important;
+      color: #000 !important;
+      letter-spacing: normal !important;
+    }
+
+    /* Hide stuff */
+    iframe[src*="youtube"],
+    a[href="javascript:window.print();"],
+    #pageTitle+br {
+      display: none !important;
+    }
+
+    /* Control where page breaks happen */
+    #divMain tr {
+      break-inside: avoid !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    #divMain>table:nth-of-type(2) tr:has(th) {
+      break-after: avoid !important;
+    }
+
+    /* Make it pretty */
+    #pageTitle h1.crs_title1 {
+      margin-bottom: 0.25em !important;
+      font-size: 2.25em !important;
+      margin-top: 0em !important;
+      padding: 0em !important;
+    }
+
+    #divMain table td p {
+      margin-top: 0em !important;
+      margin-bottom: 0em !important;
+    }
+
+    h2.crs_divider1+span>p,
+    p+p,
+    h2+p {
+      margin-top: 0.2em !important;
+      margin-bottom: 0.2em !important;
+    }
+
+    .crs_divider1 {
+      margin-bottom: 0.4em !important;
+      font-size: 1.5em !important;
+      break-after: avoid !important;
+    }
+
+    a:link::after {
+      content: " (URL: " attr(href) ")" !important;
+      font-size: 0.75em !important;
+      color: #000 !important;
+      text-decoration: none !important;
+      word-break: break-all !important;
+    }
+
+    a:link {
+      text-decoration: none !important;
+      color: #000 !important;
+    }
+
+    p {
+      orphans: 2 !important;
+      widows: 2 !important;
+    }
+
+    strong,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Atkinson Hyperlegible", sans-serif !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+    }
+
+    em {
+      font-family: "Atkinson Hyperlegible", sans-serif !important;
+      font-weight: 400 !important;
+      font-style: italic !important;
+    }
+
+    em strong,
+    strong em {
+      font-family: "Atkinson Hyperlegible", sans-serif !important;
+      font-weight: 700 !important;
+      font-style: italic !important;
+    }
+
+    #divWrap * {
+      letter-spacing: normal !important;
+      max-width: 7in !important;
+    }
+
+    td[style] {
+      margin: initial !important;
+      text-align: initial !important;
+      text-wrap: balance !important;
+    }
+
+  }
+}
