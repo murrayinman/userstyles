@@ -1,0 +1,46 @@
+/* ==UserStyle==
+@name        BbAdmin Unhider
+@namespace   https://github.com/murrayinman/userstyles
+@version     1.0.0
+@description Unhide the Institution Page Editing Function and toolbar buttons in Blackboard
+@author      Murray Inman
+@homepageURL https://github.com/murrayinman/userstyles/BbAdmin_unhider.user.css
+@supportURL  https://github.com/murrayinman/userstyles/issues
+@updateURL   https://raw.githubusercontent.com/murrayinman/userstyles/main/Bb/BbAdmin_unhider.user.css
+==/UserStyle== */
+
+@-moz-document url-prefix("https://riosalado.blackboard.com/ultra/institution-page/") {
+
+/* Unhide the Institution Page Editing Function */
+.module-wrapper .module-wrapper__header {
+  display: flex;
+  background-color: lightgray;
+  padding: 0.5em 1em;
+  border: 2px dotted #000;
+  border-inline-start: 2em solid;
+}
+
+/* Make it more clear that the Institution Page Editing Function is normally hidden */
+.module-wrapper .module-wrapper__header::before {
+  content: "HIDDEN";
+  font-weight: 800;
+  color: rgb(255 128 128);
+  transform: rotate(270deg);
+  display: block;
+  position: absolute;
+  left: -1em;
+  top: 4em;
+}
+
+/* Display the hidden toolbar buttons */
+#site-wrap {
+  button[data-analytics-id="editor.toolbar.link.button"],
+  li:has(button[data-analytics-id="editor.toolbar.image.button"]),
+  li:has(button[data-analytics-id="editor.toolbar.video.button"]),
+  li:has(button[data-analytics-id="editor.toolbar.insertYoutubeVideo.button"]),
+  li:has(button[data-analytics-id="editor.toolbar.collab_video.button"]) {
+    display: flex !important;
+    background-color: rgb(180 34 34 / 25%) !important;
+  }
+}
+}
