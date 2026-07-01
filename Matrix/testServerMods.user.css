@@ -1,0 +1,27 @@
+/* ==UserStyle==
+@name           Modify Matrix Test Server Styles
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Modifies the appearance of the Matrix Test Server
+@author         Murray Inman
+@updateURL      https://github.com/murrayinman/userstyles/raw/main/Matrix/testServerMods.user.css
+@supportURL     https://github.com/murrayinman/userstyles/issues
+@license        CC0-1.0
+==/UserStyle== */
+
+@-moz-document domain("matrix.riolearntest.co") {
+
+/* Tint the top navigation bar red */
+  div.riositetopnav > div.riositetopnav-header {
+    background-color: hsl(0, 68%, 30%);
+  }
+
+  div#load-element-content-sitetopnav,
+  div.riositetopnav-content > div.contentwrapper {
+    background-color: hsl(0, 20%, 80%);
+  }
+
+  .sitetopnav .linkgroupmenu > nav.navbar.navbar-inverse {
+    background-image: linear-gradient(to bottom, hsl(0 68% 30% / 1) 0, hsl(0 68% 15% / 1) 100%) !important;
+  }
+}
