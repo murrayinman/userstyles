@@ -9,7 +9,7 @@
 @license        CC0-1.0
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://matrix.riolearn.org/riowebapps/coursedef/LifeCycle/") {
+@-moz-document url-prefix("https://matrix.riolearn.org/riowebapps/coursedef/LifeCycle/"), url-prefix("https://matrix.riolearn.org/RioWebApps/coursedef/LifeCycle") {
 
 /* Tint the top header and navigation bar purple */
   div.riositetopnav > div.riositetopnav-header {
