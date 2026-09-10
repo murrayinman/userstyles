@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Pretty Print CA Icon Table
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
+@version        1.1.0
 @description    Formats the CA icon set page for better printing.
 @author         Murray Inman
 @updateURL    https://github.com/murrayinman/userstyles/raw/main/CourseArc/CA_Print-Icon-Table.user.css
@@ -10,54 +10,82 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://riosalado.coursearc.com/course-arc-dashboard/settings/icons/"), url-prefix("https://riosalado.coursearc.com/index.php/course-arc-dashboard/settings/icons/") {
-  tr td:last-of-type,
-  tr th:last-of-type {
-    display: none;
-  }
-
-  .main.inner nav {
-    display: none;
-  }
-
-  table.clear.table.table-bordered.table-shaded.table-manage tr {
-    break-inside: avoid;
-  }
-
-  .col-md-8 h1 {
-    margin-bottom: 0 !important;
-  }
-
-  .col-md-4.right-button,
-  a.btn.btn-success[href*="icons/single"] {
-    display: none;
-  }
-
-  .icons-preview {
-    border: none;
-  }
   
-  table-bordered > tbody > tr > th,
-  .table-bordered > tbody > tr > th,
-  table-bordered > tfoot > tr > th,
-  .table-bordered > tfoot > tr > th,
-  table-bordered > thead > tr > td,
-  .table-bordered > thead > tr > td,
-  table-bordered > tbody > tr > td,
-  .table-bordered > tbody > tr > td,
-  table-bordered > tfoot > tr > td,
-  .table-bordered > tfoot > tr > td {
-    border-color: #2c3e50;
-  }
-
-  table.table-bordered > tbody > tr > td:first-of-type {
-    font-weight: 600;
-    background-color: hsl(210 29% 95% / 1);
-  }
-
   @media print {
-    .table th {
-      background-color: #323232 !important;
-      color: #ffffff !important;
+    
+    body.settings.icons {
+
+      .main.inner nav,
+      .col-md-4.right-button,
+      a.btn.btn-success[href*="icons/single"],
+      footer {
+        display: none !important;
+      }
+    
+      .col-md-8 h1 {
+        margin-bottom: 0 !important;
+      }
+      
+      .container.Icons {
+        width: 100%;
+        break-inside: auto;
+      }
+
+      table.clear.table.table-bordered.table-shaded.table-manage {
+        width: 100% !important;
+
+        tr {
+          break-inside: avoid;
+        }
+      
+        th {
+          border: 1px solid rgb(51, 51, 51) !important;
+          border-radius: 0em;
+          background-color: rgb(51, 51, 51) !important;
+          color: #ffffff !important;
+
+          &:is(:first-of-type) {
+            border-right: 1px solid rgb(190, 190, 190) !important;
+            width: auto;
+          }
+
+          &:last-of-type {
+            display: none !important;
+          }
+        }
+      
+        td {
+          border: 1px solid rgb(51, 51, 51) !important;
+          text-align: left !important;
+
+          &:first-of-type {
+            font-weight: 600;
+            background-color: rgb(239, 242, 246);
+          }
+
+          &:last-of-type {
+            display: none !important;
+          }
+          
+          & .icons-preview {
+            margin: 0em;
+            text-align: left;
+            border: none;
+            
+            & img {
+              height: 45px;
+              width: auto;
+            }
+          }
+        }
+      }
+      
+      nav.navbar.navbar-default,
+      .main.inner {
+        break-inside: auto;
+      }
+
     }
   }
+
 }
