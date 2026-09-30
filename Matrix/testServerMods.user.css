@@ -1,12 +1,14 @@
 /* ==UserStyle==
-@name           Modify Matrix Test Server Styles (Make it RED)
-@namespace      github.com/openstyles/stylus
-@version        1.2.0
-@description    Makes the Matrix Test Server red to be more obvious
-@author         Murray Inman
-@updateURL      https://github.com/murrayinman/userstyles/raw/main/Matrix/testServerMods.user.css
-@supportURL     https://github.com/murrayinman/userstyles/issues
-@license        CC0-1.0
+@name             Modify Matrix Test Server Styles (Make it RED)
+@namespace        github.com/openstyles/stylus
+@version          1.2.2
+@description      Makes the Matrix Test Server red to be more obvious
+@author           Murray Inman
+@updateURL        https://github.com/murrayinman/userstyles/raw/main/Matrix/testServerMods.user.css
+@supportURL       https://github.com/murrayinman/userstyles/issues
+@browserExtension Stylus - https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
+@helpfulInfo      https://github.com/openstyles/stylus/wiki/Writing-UserCSS
+@license          CC0-1.0
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://matrix.riolearntest.co"),
