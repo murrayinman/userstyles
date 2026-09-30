@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             Modify Matrix Test Server Styles (Make it RED)
 @namespace        github.com/openstyles/stylus
-@version          1.2.2
+@version          1.2.3
 @description      Makes the Matrix Test Server red to be more obvious
 @author           Murray Inman
 @updateURL        https://github.com/murrayinman/userstyles/raw/main/Matrix/testServerMods.user.css
@@ -12,7 +12,8 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://matrix.riolearntest.co"),
-url-prefix("https://ams.riolearntest.co") {
+               url-prefix("https://ams.riolearntest.co"),
+               url-prefix("https://qm.riolearntest.co") {
 
 /* Hide the alert banner */
   div#announcement-wrapper {
@@ -21,8 +22,13 @@ url-prefix("https://ams.riolearntest.co") {
 
 /* Tint the top headerbar red */
   div.riositetopnav > div.riositetopnav-header,
-  .ams div.riositetopnav > div.riositetopnav-header {
-    background-color: hsl(0, 68%, 30%);
+  .ams div.riositetopnav > div.riositetopnav-header, 
+  .navbar-nav-inverse,
+  .navbar-default .navbar-nav > li > a,
+  .navbar .nav ul.dropdown-menu,
+  .dropdown-menu > li > a {
+    background-color: hsl(0, 68%, 30%) !important;
+    color: #fff !important;
   }
 
 /* Tint the header light red */
